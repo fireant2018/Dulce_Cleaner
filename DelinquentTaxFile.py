@@ -6,7 +6,7 @@ import fields_filetype_module
 import delimiter_based_file_module
 import position_based_file_module
 
-# Define variables
+# Define variables TEST
 
 folder_name = 'TXDallas\\'
 file_name = 'TXDallas_flat404.txt'  # The file name was changed to avoid problems with periods.
