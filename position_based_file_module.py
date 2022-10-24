@@ -84,13 +84,19 @@ def process_position_based_file(county_name, file_name, file_fields):
                                 zipcode = line[427:439].strip()
                                 field_value = zipcode[0:5]
 
+                            elif start_position == 489 and more_fields is True:
+                                f_v = True
+                                totalamountdue = line[489:500].strip()
+                                field_value = str(float(totalamountdue)/100)
+                                more_fields = False
+
                             else:
                                 f_v = False
 
                         elif county_name == "TXCollin":
                             print("Collin County")
 
-                        if field_counter < dictionary_length - 1:
+                        if field_counter < dictionary_length-1:
                             if f_v is True:
                                 my_data += field_value + my_del
                             else:
